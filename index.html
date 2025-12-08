@@ -181,6 +181,7 @@
             margin: 0 0 1.5rem 0;
             line-height: 1.2;
             color: #ffffff;
+            text-transform: none !important;
         }
 
         .hero-tagline {
@@ -198,6 +199,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 3rem;
         }
 
         .hero-buttons {
@@ -311,14 +313,6 @@
         }
 
         /* About Section */
-        .about-section {
-            background: white;
-        }
-
-        .dark-theme .about-section {
-            background: #0f172a;
-        }
-
         .about-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -330,11 +324,6 @@
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #4b5563;
-        }
-
-        .dark-theme .about-text p {
-            color: #cbd5e1;
         }
 
         .profile-placeholder {
@@ -406,11 +395,6 @@
         .description {
             margin-bottom: 1rem;
             line-height: 1.6;
-            color: #4b5563;
-        }
-
-        .dark-theme .description {
-            color: #cbd5e1;
         }
 
         .project-tags {
@@ -434,14 +418,6 @@
         }
 
         /* Projects Section */
-        .projects-section {
-            background: white;
-        }
-
-        .dark-theme .projects-section {
-            background: #0f172a;
-        }
-
         .project-filters {
             display: flex;
             justify-content: center;
@@ -458,12 +434,6 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s;
-        }
-
-        .dark-theme .filter-btn {
-            background: #1e293b;
-            border-color: #334155;
-            color: #cbd5e1;
         }
 
         .filter-btn.active,
@@ -519,7 +489,6 @@
         .project-content h3 {
             margin-bottom: 0.75rem;
             color: #1f2937;
-            font-size: 1.25rem;
         }
 
         .dark-theme .project-content h3 {
@@ -529,11 +498,23 @@
         .project-content p {
             margin-bottom: 1rem;
             color: #6b7280;
-            font-size: 0.95rem;
         }
 
-        .dark-theme .project-content p {
-            color: #a0aec0;
+        .btn-view-project {
+            width: 100%;
+            padding: 0.75rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-view-project:hover {
+            background: #5568d3;
         }
 
         /* Resume Section */
@@ -545,147 +526,284 @@
             background: #1e293b;
         }
 
-        .skills-grid {
+        .resume-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
 
-        .skill-category {
+        .resume-document {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .dark-theme .skill-category {
+        .dark-theme .resume-document {
             background: #0f172a;
         }
 
-        .skill-category h3 {
+        .resume-header h3 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .dark-theme .resume-header h3 {
+            color: #f1f5f9;
+        }
+
+        .resume-section-mini {
+            margin-top: 1.5rem;
+        }
+
+        .resume-section-mini h4 {
             color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
         }
 
-        .skill-item {
+        .action-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dark-theme .action-card {
+            background: #0f172a;
+        }
+
+        .action-card:first-child {
+            margin-bottom: 2rem;
+        }
+
+        .action-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
-        .skill-item label {
-            font-weight: 500;
+        .action-card h3 {
+            margin-bottom: 1rem;
             color: #1f2937;
         }
 
-        .dark-theme .skill-item label {
-            color: #e2e8f0;
+        .dark-theme .action-card h3 {
+            color: #f1f5f9;
         }
 
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 10px;
-            margin-top: 0.5rem;
-            overflow: hidden;
+        .action-card ul {
+            list-style: none;
+            text-align: left;
         }
 
-        .dark-theme .progress-bar {
-            background: #334155;
+        .action-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .progress {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
+        .dark-theme .action-card li {
+            border-bottom-color: #334155;
         }
 
         /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 5rem 2rem !important;
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
 
-        .contact-section .section-title {
-            color: white;
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .dark-theme .contact-info h3 {
+            color: #f1f5f9;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-theme .contact-form {
+            background: #1e293b;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 0.75rem;
-            border: none;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-family: inherit;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            background: white;
-            color: #667eea;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 1rem;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        .dark-theme .form-group input,
+        .dark-theme .form-group textarea {
+            background: #0f172a;
+            border-color: #334155;
+            color: #e2e8f0;
         }
 
         /* Footer */
-        footer {
+        .footer {
             background: #1f2937;
             color: white;
-            text-align: center;
             padding: 2rem 0;
+            text-align: center;
         }
 
-        .dark-theme footer {
-            background: #0f172a;
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Style Selector */
+        .style-selector {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .style-selector.active {
+            display: flex;
+        }
+
+        .style-selector-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .dark-theme .style-selector-content {
+            background: #1e293b;
+        }
+
+        .style-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .style-option {
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .style-option:hover,
+        .style-option.active {
+            border-color: #667eea;
+        }
+
+        .style-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .close-style-selector {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6b7280;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .dark-theme .modal-content {
+            background: #1e293b;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6b7280;
         }
 
         /* Animations */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: all 0.6s ease;
         }
 
-        .animate-on-scroll.visible {
+        .animate-on-scroll.animated {
             opacity: 1;
             transform: translateY(0);
         }
@@ -693,37 +811,29 @@
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                gap: 1rem;
+                display: none;
             }
 
             .hero-name {
                 font-size: 2.5rem;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .hero-tagline {
+                font-size: 1.1rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
+            .hero-description {
+                font-size: 1rem;
             }
 
-            .skills-grid {
+            .about-content,
+            .contact-content,
+            .resume-content {
                 grid-template-columns: 1fr;
             }
 
             .projects-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
             }
         }
     </style>
@@ -744,7 +854,6 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-right">
-                <button class="style-toggle" id="styleToggle" aria-label="Change style">🎨 Style</button>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="sun-icon">☀️</span>
                     <span class="moon-icon">🌙</span>
@@ -753,14 +862,53 @@
         </div>
     </nav>
 
+    <div class="style-selector" id="styleSelector">
+        <div class="style-selector-content">
+            <h3>Choose Your Style</h3>
+            <p>Click on a style to preview it on your portfolio</p>
+            <div class="style-options">
+                <button class="style-option active" data-style="default">
+                    <div class="style-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <span>Current Style</span>
+                    <small>Purple gradient</small>
+                </button>
+                <button class="style-option" data-style="minimal">
+                    <div class="style-preview" style="background: linear-gradient(135deg, #6B7280 0%, #374151 100%);"></div>
+                    <span>Modern & Minimal</span>
+                    <small>Clean gray tones</small>
+                </button>
+                <button class="style-option" data-style="dashboard">
+                    <div class="style-preview" style="background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);"></div>
+                    <span>Dashboard Feel</span>
+                    <small>Professional blue</small>
+                </button>
+                <button class="style-option" data-style="colorful">
+                    <div class="style-preview" style="background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);"></div>
+                    <span>Creative & Colorful</span>
+                    <small>Vibrant pink-orange</small>
+                </button>
+                <button class="style-option" data-style="corporate">
+                    <div class="style-preview" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);"></div>
+                    <span>Professional Corporate</span>
+                    <small>Business green</small>
+                </button>
+            </div>
+            <button class="close-style-selector" id="closeStyleSelector">&times;</button>
+        </div>
+    </div>
+
     <section id="home" class="hero">
         <div class="hero-bg-shape hero-shape-1"></div>
         <div class="hero-bg-shape hero-shape-2"></div>
         <div class="hero-center-content">
             <p class="hero-subtitle">MS Business Analytics Student</p>
-            <h1 class="hero-name">MEHERZAD SUKHESWALA</h1>
-            <p class="hero-tagline">Turning <span style="font-weight: 600;">data into decisions</span>, insights into <span style="font-weight: 600;">impact</span>.</p>
-            <p class="hero-description">Driving business growth through analytics, visualization, and strategic problem-solving at Northeastern University.</p>
+            <h1 class="hero-name">Meherzad Sukheswala</h1>
+            <p class="hero-tagline">
+                Turning data into decisions, insights into impact.
+            </p>
+            <p class="hero-description">
+                Driving business growth through analytics, visualization, and strategic problem-solving at Northeastern University.
+            </p>
             
             <div class="hero-buttons">
                 <a href="#experience" class="btn btn-primary">
@@ -791,11 +939,6 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                </a>
-                <a href="https://github.com/your-github" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
             </div>
@@ -896,6 +1039,7 @@
     <section id="projects" class="projects-section">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            
             <div class="project-filters animate-on-scroll">
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="python">Python</button>
@@ -903,64 +1047,113 @@
                 <button class="filter-btn" data-filter="sql">SQL</button>
                 <button class="filter-btn" data-filter="ml">Machine Learning</button>
             </div>
-            <div class="projects-grid animate-on-scroll">
-                <div class="project-card" data-category="python,ml">
+
+            <div class="projects-grid">
+                <div class="project-card" data-tags="python,ml,sql">
                     <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">📊</div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>XGB</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Customer Churn Prediction</h3>
-                        <p>Built a machine learning model to predict customer churn using Python, achieving 87% accuracy. Analyzed 50,000+ customer records.</p>
+                        <h3>XGBoost Lead Scoring Model</h3>
+                        <p>Predictive model for lead conversion using gradient boosting with 89% ROC-AUC score.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
+                            <span class="tag">XGBoost</span>
                             <span class="tag">ML</span>
-                            <span class="tag">Data Science</span>
                         </div>
+                        <button class="btn-view-project" data-project="1">View Details</button>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="tableau">
+                <div class="project-card" data-tags="tableau,sql">
                     <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);">📈</div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span>VIZ</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Sales Dashboard</h3>
-                        <p>Created an interactive Tableau dashboard displaying real-time sales metrics, KPIs, and trend analysis for executive reporting.</p>
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Interactive Tableau dashboard tracking KPIs across multiple regions and products.</p>
                         <div class="project-tags">
                             <span class="tag">Tableau</span>
-                            <span class="tag">Analytics</span>
-                            <span class="tag">Business Intel</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="sql,python">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);">🗄️</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Pipeline Automation</h3>
-                        <p>Developed an ETL pipeline using Python and SQL to automate data processing, reducing processing time by 60%.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
                             <span class="tag">SQL</span>
-                            <span class="tag">ETL</span>
+                            <span class="tag">BI</span>
                         </div>
+                        <button class="btn-view-project" data-project="2">View Details</button>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="python,ml">
+                <div class="project-card" data-tags="python,ml">
                     <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">🤖</div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span>NLP</span>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Sentiment Analysis Model</h3>
-                        <p>Implemented NLP sentiment analysis on 10,000+ social media posts to understand customer sentiment and market trends.</p>
+                        <h3>Customer Sentiment Analysis</h3>
+                        <p>NLP-based sentiment classifier analyzing customer reviews with 85% accuracy.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">NLP</span>
                             <span class="tag">ML</span>
                         </div>
+                        <button class="btn-view-project" data-project="3">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="sql,python">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <span>DB</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Database Design</h3>
+                        <p>Optimized database schema and queries reducing query time by 60%.</p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <button class="btn-view-project" data-project="4">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="python,tableau">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <span>ETL</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automated ETL Pipeline</h3>
+                        <p>Python-based data pipeline automating extraction, transformation, and loading processes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">ETL</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <button class="btn-view-project" data-project="5">View Details</button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tags="tableau,sql">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                            <span>HR</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>HR Analytics Dashboard</h3>
+                        <p>Comprehensive workforce analytics dashboard tracking retention, performance, and hiring.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tableau</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">HR</span>
+                        </div>
+                        <button class="btn-view-project" data-project="6">View Details</button>
                     </div>
                 </div>
             </div>
@@ -969,110 +1162,50 @@
 
     <section id="resume" class="resume-section">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Skills & Expertise</h2>
-            <div class="skills-grid animate-on-scroll">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-item">
-                        <label>Python</label>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>SQL</label>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Machine Learning</label>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>R</label>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
+            <h2 class="section-title animate-on-scroll">Resume</h2>
+            <div class="resume-content animate-on-scroll">
+                <div class="resume-preview">
+                    <div class="resume-document">
+                        <div class="resume-header">
+                            <h3>Meherzad Sukheswala</h3>
+                            <p>Business Analytics Professional</p>
+                        </div>
+                        <div class="resume-section-mini">
+                            <h4>Contact</h4>
+                            <p>Email: sukheswala.m@northeastern.edu | Phone: (123) 456-7890 | Boston, MA</p>
+                        </div>
+                        <div class="resume-section-mini">
+                            <h4>Summary</h4>
+                            <p>Results-driven Business Analytics professional with expertise in data analysis, visualization, and machine learning. Proven track record of delivering actionable insights that drive business growth and operational efficiency.</p>
+                        </div>
+                        <div class="resume-section-mini">
+                            <h4>Experience</h4>
+                            <p><strong>Data Analyst Intern</strong> | Company Name | June 2024 - August 2024</p>
+                            <p><strong>Business Intelligence Analyst</strong> | Company Name | January 2024 - May 2024</p>
+                        </div>
+                        <div class="resume-section-mini">
+                            <h4>Skills</h4>
+                            <p>Python, SQL, Tableau, Power BI, Machine Learning, Statistical Analysis, Data Visualization, Excel</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="skill-category">
-                    <h3>Analytics Tools</h3>
-                    <div class="skill-item">
-                        <label>Tableau</label>
-                        <span>90%</span>
+                <div class="resume-actions">
+                    <div class="action-card">
+                        <div class="action-icon">📄</div>
+                        <h3>View Full Resume</h3>
+                        <p>Click the button below to view my complete resume in PDF format</p>
+                        <a href="resume.pdf" class="btn btn-primary" download>View & Download PDF</a>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Power BI</label>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Excel</label>
-                        <span>95%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Google Analytics</label>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill-item">
-                        <label>Problem Solving</label>
-                        <span>95%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Communication</label>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Team Collaboration</label>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <label>Presentation</label>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
+                    <div class="action-card">
+                        <div class="action-icon">💼</div>
+                        <h3>Key Highlights</h3>
+                        <ul>
+                            <li>12+ analytics projects completed</li>
+                            <li>90% proficiency in Python & SQL</li>
+                            <li>Expert in Tableau & Power BI dashboards</li>
+                            <li>Machine learning model development</li>
+                            <li>3.8/4.0 GPA in MS Analytics</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1081,89 +1214,101 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">I'm always open to new opportunities and collaborations. Let's connect!</p>
-            <div class="contact-form">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" placeholder="Your Name">
+            <h2 class="section-title animate-on-scroll">Get in Touch</h2>
+            <div class="contact-content animate-on-scroll">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>
+                        I'm always interested in new opportunities, collaborations, and data challenges. 
+                        Feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>sukheswala.m@northeastern.edu</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Boston, MA</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea placeholder="Your message here..."></textarea>
-                </div>
-                <button class="submit-btn">Send Message</button>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Meherzad Sukheswala. All rights reserved.</p>
+            <p>&copy; 2025 Meherzad Sukheswala. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
-        // Existing theme toggle
         themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
             body.classList.toggle('light-theme');
-            localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+            body.classList.toggle('dark-theme');
         });
 
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        body.classList.remove('dark-theme', 'light-theme');
-        body.classList.add(`${savedTheme}-theme`);
+        // Style Selector
+        const styleToggle = document.getElementById('styleToggle');
+        const styleSelector = document.getElementById('styleSelector');
+        const closeStyleSelector = document.getElementById('closeStyleSelector');
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
+        styleToggle.addEventListener('click', () => {
+            styleSelector.classList.add('active');
         });
 
-        // Project filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category.includes(filter)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
+        closeStyleSelector.addEventListener('click', () => {
+            styleSelector.classList.remove('active');
         });
 
-        // Smooth scroll
+        styleSelector.addEventListener('click', (e) => {
+            if (e.target === styleSelector) {
+                styleSelector.classList.remove('active');
+            }
+        });
+
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1174,7 +1319,90 @@
                 }
             });
         });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Project Filters
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.tags.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Project Modal
+        const modal = document.getElementById('projectModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalBody = document.getElementById('modalBody');
+        const viewProjectBtns = document.querySelectorAll('.btn-view-project');
+
+        viewProjectBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const projectId = btn.dataset.project;
+                // Add your project details here
+                modalBody.innerHTML = `
+                    <h2>Project Details</h2>
+                    <p>Detailed information about project ${projectId} will go here.</p>
+                `;
+                modal.classList.add('active');
+            });
+        });
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formStatus.textContent = 'Message sent successfully!';
+            formStatus.style.color = 'green';
+            contactForm.reset();
+            
+            setTimeout(() => {
+                formStatus.textContent = '';
+            }, 3000);
+        });
     </script>
 </body>
 </html>
-
