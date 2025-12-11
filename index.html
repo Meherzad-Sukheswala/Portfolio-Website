@@ -313,10 +313,14 @@
         }
 
         /* About Section */
+        .about-section {
+            padding: 5rem 0;
+        }
+
         .about-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
             align-items: flex-start;
         }
 
@@ -326,13 +330,22 @@
             line-height: 1.8;
         }
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
+        .about-image {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .about-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         /* Experience Section */
