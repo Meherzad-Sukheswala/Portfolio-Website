@@ -313,10 +313,14 @@
         }
 
         /* About Section */
+        .about-section {
+            padding: 5rem 0;
+        }
+
         .about-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
             align-items: flex-start;
         }
 
@@ -326,13 +330,22 @@
             line-height: 1.8;
         }
 
-        .about-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
+        .about-image {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .about-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         /* Experience Section */
@@ -910,7 +923,7 @@
                     </svg>
                     Explore My Work
                 </a>
-                <a href="Meherzad_Sukheswala_Resume.pdf" class="btn btn-secondary" target="_blank" download>
+                <a href="Meherzad_Sukheswala_Resume.pdf" class="btn btn-secondary" target="_blank">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
@@ -1186,7 +1199,7 @@
                         <div class="action-icon">📄</div>
                         <h3>View Full Resume</h3>
                         <p>Click the button below to view my complete resume in PDF format</p>
-                        <a href="Meherzad_Sukheswala_Resume.pdf" class="btn btn-primary" target="_blank" download>View & Download PDF</a>
+                        <a href="Meherzad_Sukheswala_Resume.pdf" class="btn btn-primary" target="_blank">View & Download PDF</a>
                     </div>
                     <div class="action-card">
                         <div class="action-icon">💼</div>
