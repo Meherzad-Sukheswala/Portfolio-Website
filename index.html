@@ -102,7 +102,7 @@
             align-items: center;
         }
 
-        .style-toggle, .theme-toggle {
+        .theme-toggle {
             padding: 0.5rem 1rem;
             border: 1px solid #e5e7eb;
             background: white;
@@ -111,20 +111,18 @@
             transition: all 0.3s;
         }
 
-        .dark-theme .style-toggle,
         .dark-theme .theme-toggle {
             background: #1e293b;
             border-color: #334155;
             color: #e2e8f0;
         }
 
-        .style-toggle:hover,
         .theme-toggle:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Hero Section - Centered Layout */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -288,14 +286,12 @@
             }
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Section Styles */
         section {
             padding: 5rem 0;
         }
@@ -420,31 +416,6 @@
         }
 
         /* Projects Section */
-        .project-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1.5rem;
-            border: 2px solid #e5e7eb;
-            background: white;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -688,75 +659,6 @@
             text-decoration: none;
         }
 
-        /* Style Selector */
-        .style-selector {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .style-selector.active {
-            display: flex;
-        }
-
-        .style-selector-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            max-width: 600px;
-            position: relative;
-        }
-
-        .dark-theme .style-selector-content {
-            background: #1e293b;
-        }
-
-        .style-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .style-option {
-            padding: 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            cursor: pointer;
-            background: white;
-            transition: all 0.3s;
-        }
-
-        .style-option:hover,
-        .style-option.active {
-            border-color: #667eea;
-        }
-
-        .style-preview {
-            width: 100%;
-            height: 80px;
-            border-radius: 6px;
-            margin-bottom: 0.5rem;
-        }
-
-        .close-style-selector {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #6b7280;
-        }
-
         /* Modal */
         .modal {
             display: none;
@@ -867,41 +769,6 @@
         </div>
     </nav>
 
-    <div class="style-selector" id="styleSelector">
-        <div class="style-selector-content">
-            <h3>Choose Your Style</h3>
-            <p>Click on a style to preview it on your portfolio</p>
-            <div class="style-options">
-                <button class="style-option active" data-style="default">
-                    <div class="style-preview" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <span>Current Style</span>
-                    <small>Purple gradient</small>
-                </button>
-                <button class="style-option" data-style="minimal">
-                    <div class="style-preview" style="background: linear-gradient(135deg, #6B7280 0%, #374151 100%);"></div>
-                    <span>Modern & Minimal</span>
-                    <small>Clean gray tones</small>
-                </button>
-                <button class="style-option" data-style="dashboard">
-                    <div class="style-preview" style="background: linear-gradient(135deg, #0EA5E9 0%, #2563EB 100%);"></div>
-                    <span>Dashboard Feel</span>
-                    <small>Professional blue</small>
-                </button>
-                <button class="style-option" data-style="colorful">
-                    <div class="style-preview" style="background: linear-gradient(135deg, #EC4899 0%, #F59E0B 100%);"></div>
-                    <span>Creative & Colorful</span>
-                    <small>Vibrant pink-orange</small>
-                </button>
-                <button class="style-option" data-style="corporate">
-                    <div class="style-preview" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);"></div>
-                    <span>Professional Corporate</span>
-                    <small>Business green</small>
-                </button>
-            </div>
-            <button class="close-style-selector" id="closeStyleSelector">&times;</button>
-        </div>
-    </div>
-
     <section id="home" class="hero">
         <div class="hero-bg-shape hero-shape-1"></div>
         <div class="hero-bg-shape hero-shape-2"></div>
@@ -971,7 +838,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="Picture_Meherzad.jpg" alt="Meherzad Sukheswala" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                    <img src="Picture_Meherzad.jpg" alt="Meherzad Sukheswala">
                 </div>
             </div>
         </div>
@@ -1048,29 +915,10 @@
             <h2 class="section-title animate-on-scroll">Featured Projects</h2>
 
             <div class="projects-grid animate-on-scroll">
-                <div class="project-card" data-tags="python,ml,sql">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <span>ML</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Propensity to Buy Prediction Model</h3>
-                        <p>Built ML models using XGBoost for lead scoring with synthetic dataset, enabling targeted outreach and decision-making for insurance leads.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">XGBoost</span>
-                            <span class="tag">Azure Cosmos DB</span>
-                            <span class="tag">Streamlit</span>
-                        </div>
-                        <button class="btn-view-project" data-project="1">View Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="tableau,sql">
+                <div class="project-card">
                     <div class="project-image">
                         <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <span>📊</span>
+                            <span style="font-size: 5rem;">📊</span>
                         </div>
                     </div>
                     <div class="project-content">
@@ -1085,46 +933,10 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-tags="python,ml">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <span>CV</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Computer Vision Quality Control System</h3>
-                        <p>Developed Python-based computer vision system using Raspberry Pi to detect missing components with 98% accuracy.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">Raspberry Pi</span>
-                        </div>
-                        <button class="btn-view-project" data-project="3">View Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="sql,python,tableau">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
-                            <span>ETL</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>ERP Data Pipeline Integration</h3>
-                        <p>Designed end-to-end data pipeline across multiple ERP systems with unique global IDs, eliminating manual data entry.</p>
-                        <div class="project-tags">
-                            <span class="tag">ERP Systems</span>
-                            <span class="tag">Data Mapping</span>
-                            <span class="tag">Lucidchart</span>
-                        </div>
-                        <button class="btn-view-project" data-project="4">View Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="python,tableau">
+                <div class="project-card">
                     <div class="project-image">
                         <div class="project-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-                            <span>📈</span>
+                            <span style="font-size: 5rem;">📈</span>
                         </div>
                     </div>
                     <div class="project-content">
@@ -1136,24 +948,6 @@
                             <span class="tag">Data Analysis</span>
                         </div>
                         <a href="https://github.com/Meherzad-Sukheswala/Excel-Projects" class="btn-view-project" target="_blank" rel="noopener">View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-tags="python,ml">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
-                            <span>AI</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Synthetic Data Generation</h3>
-                        <p>Generated 10,000-row synthetic dataset applying demographic, behavioral, and sales funnel logic for KPI development.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Data Generation</span>
-                            <span class="tag">Analytics</span>
-                        </div>
-                        <button class="btn-view-project" data-project="6">View Details</button>
                     </div>
                 </div>
             </div>
@@ -1289,7 +1083,6 @@
     </div>
 
     <script>
-        // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
@@ -1298,26 +1091,6 @@
             body.classList.toggle('dark-theme');
         });
 
-        // Style Selector
-        const styleToggle = document.getElementById('styleToggle');
-        const styleSelector = document.getElementById('styleSelector');
-        const closeStyleSelector = document.getElementById('closeStyleSelector');
-
-        styleToggle.addEventListener('click', () => {
-            styleSelector.classList.add('active');
-        });
-
-        closeStyleSelector.addEventListener('click', () => {
-            styleSelector.classList.remove('active');
-        });
-
-        styleSelector.addEventListener('click', (e) => {
-            if (e.target === styleSelector) {
-                styleSelector.classList.remove('active');
-            }
-        });
-
-        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1331,7 +1104,6 @@
             });
         });
 
-        // Scroll Animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1349,58 +1121,6 @@
             observer.observe(el);
         });
 
-        // Project Filters
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.tags.includes(filter)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Project Modal
-        const modal = document.getElementById('projectModal');
-        const modalClose = document.getElementById('modalClose');
-        const modalBody = document.getElementById('modalBody');
-        const viewProjectBtns = document.querySelectorAll('.btn-view-project');
-
-        viewProjectBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const projectId = btn.dataset.project;
-                // Add your project details here
-                modalBody.innerHTML = `
-                    <h2>Project Details</h2>
-                    <p>Detailed information about project ${projectId} will go here.</p>
-                `;
-                modal.classList.add('active');
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-
-        // Contact Form
         const contactForm = document.getElementById('contactForm');
         const formStatus = document.getElementById('formStatus');
 
