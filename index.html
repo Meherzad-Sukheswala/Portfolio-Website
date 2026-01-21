@@ -977,7 +977,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Uber & Lyft Pricing Strategy Analysis</h3>
-                        <p>Analyzed 97,000+ rides to optimize pricing during high demand periods. Created Tableau dashboards identifying peak demand zones, revenue opportunities, and surge pricing strategies.</p>
+                        <p>Analyzed 97,000+ rides to optimize pricing during high-demand periods. Created Tableau dashboards identifying peak demand zones, revenue opportunities, and surge pricing strategies.</p>
                         <div class="project-tags">
                             <span class="tag">Tableau</span>
                             <span class="tag">Data Analysis</span>
@@ -1118,7 +1118,13 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("dVmmYNHhyTRnCdd1-");
+        })();
+
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
@@ -1157,20 +1163,38 @@
             observer.observe(el);
         });
 
+        // Contact Form with EmailJS
         const contactForm = document.getElementById('contactForm');
         const formStatus = document.getElementById('formStatus');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            formStatus.textContent = 'Message sent successfully!';
-            formStatus.style.color = 'green';
-            contactForm.reset();
             
-            setTimeout(() => {
-                formStatus.textContent = '';
-            }, 3000);
+            // Show loading message
+            formStatus.textContent = 'Sending message...';
+            formStatus.style.color = '#667eea';
+            
+            // Send email using EmailJS
+            emailjs.sendForm('service_11idwcb', 'template_vivxi5a', contactForm)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    formStatus.textContent = 'Message sent successfully! I will get back to you soon.';
+                    formStatus.style.color = 'green';
+                    contactForm.reset();
+                    
+                    setTimeout(() => {
+                        formStatus.textContent = '';
+                    }, 5000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    formStatus.textContent = 'Failed to send message. Please try again or email me directly.';
+                    formStatus.style.color = 'red';
+                    
+                    setTimeout(() => {
+                        formStatus.textContent = '';
+                    }, 5000);
+                });
         });
     </script>
 </body>
 </html>
-
